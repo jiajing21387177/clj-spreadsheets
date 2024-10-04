@@ -1,0 +1,1 @@
+["^ ","~$header",["^ ","~:row",6,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$components.header","~:top-ns","^7","~:arities",["^ ","~i1",["^ ","~:ret","~:vector","~:arglist-str","[{:keys [brand-logo]}]"]],"~:type","~:fn"],"~:filename","C:\\source\\clj-spreadsheets\\src\\components\\header.cljs"]

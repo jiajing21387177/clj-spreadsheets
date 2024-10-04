@@ -1,0 +1,23 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src"]
+
+ :dependencies
+ [[reagent "1.2.0"]
+  [nano-id/nano-id "1.1.0"]]
+
+ :builds {:app {:target :browser
+                :output-dir "public/js"
+                :asset-path "/js"
+                :modules {:main {:init-fn app.core/init}}
+                :dev {:compiler-options {:output-feature-set :es6}}
+                :release {:compiler-options {:output-feature-set :es6}}
+                #_#_:build-hooks [(shadow.cljs.build-report/hook)
+                                  (shadow.css.build/hook {:output-to "public/css/main.css"
+                                                          :build-id :app})]}
+          #_#_:css {:target :css
+                    :output-to "public/css/compiled.css"
+                    :exclude #{:dev}
+                    :compiler-options {:output-style :compressed}}}
+ :dev-http {8080 "public"}
+ :css-dirs ["src/css"]}
